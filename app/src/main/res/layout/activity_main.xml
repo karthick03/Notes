@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:gravity="center"
+              tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/llProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/signinFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Please Sign In To Continue"
+            android:visibility="visible"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            android:autoLink="all"
+            android:gravity="center"
+            android:text="Skip login, I'll do it later"
+            android:onClick="skipLogin"
+            android:clickable="true"/>
+        <Button
+            android:id="@+id/btn_sign_out"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout from Google"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:id="@+id/proceed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To App"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
